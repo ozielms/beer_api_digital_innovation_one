@@ -23,6 +23,7 @@ public class Beer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    // unique -> Não pode conter outros itens com o mesmo nome.
     @Column(nullable = false, unique = true)
     private String name;
 
@@ -31,7 +32,7 @@ public class Beer {
 
     @Column(nullable = false)
     private int max;
-
+    // Quantity pode ser menor ou igua a max.
     @Column(nullable = false)
     private int quantity;
 
